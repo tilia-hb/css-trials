@@ -5,7 +5,7 @@
     <style>
 
     body {
-    	margin: 0;
+      font-family: sans-serif;
     }
 
     p {
@@ -28,7 +28,7 @@
     	background-color: #ffd700;
 
     }*/
-	div {
+	/*div {
 		background-color: black;
 
     }
@@ -41,7 +41,6 @@
 		margin:25px;
 		margin-top:50px;
     	margin-left:50px;
-		/*margin-left:25px;*/
 		margin-right:25px;
 
     }
@@ -68,7 +67,74 @@
     	width:350px;
     	height: 200px;
 
+    }*/
+    div {
+      background-color: #ffffff;
+      margin:6px;
+
     }
+    h1{
+      margin:5px;
+    }
+    .large-rect {
+      background-color: #555555;
+      width:600px;
+      height: 130px;
+      margin-top: 10px;
+
+    }
+    .small-rect {
+      background-color: #cccccc;
+      margin: 6px;
+      height: 110px;
+      width: 291px;
+      display: inline-block;
+      vertical-align: top;
+
+    }.top{
+      width:192px;
+      margin: 6px;
+      height:118px;
+
+    }
+    #top-middle{
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .mid{
+      width:142.5px;
+      margin:6px;
+      height:75px;
+    }
+    #mid-leftleft{
+      height:100px;
+    }
+    #mid-left{
+      margin-left: 0;
+      margin-right:0;
+
+    }
+    #mid-right{
+      margin-right:0;
+      height:100px;
+    }
+
+    #bottom-left {
+      height:35px;
+      vertical-align: bottom;
+      width:291px;
+      margin-right: 3px;
+
+    }
+    #bottom-right {
+      height:118px;
+      vertical-align: bottom;
+      width:291px;
+      margin-left: 3px;
+
+    }
+
 
     </style>
   </head>
@@ -81,7 +147,7 @@
  -->
   	<!-- <p>Hello World</p> -->
  
- 	<div class="red-rectangle">
+<!--  	<div class="red-rectangle">
 
 	  	<div class="left-block-black">.</div>
 	  	<div class="right-block-black">.</div>
@@ -95,6 +161,24 @@
 
 
 	 </div>
+ -->
+    <h1>AAAAAHHHHH</h1>
+
+     <div class="large-rect">
+       <div class="small-rect top" id="top-left"> </div><div class="small-rect top" id="top-middle"> </div><div class="small-rect top" id="top-right"> </div>
+     </div>
+
+     <div class="large-rect">
+       <div class="small-rect mid" id="mid-leftleft"> </div><div class="small-rect mid" id="mid-left"> </div><div class="small-rect mid" id="mid-right"> </div><div class="small-rect mid" id="mid-right-right"> </div>
+     </div>
+       
+
+     <div class="large-rect">
+       <div class="small-rect" id="bottom-left"> </div><div class="small-rect" id="bottom-right"> </div>
+     </div>
+
+
+
   </body>
 
 </html>
