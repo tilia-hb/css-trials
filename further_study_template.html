@@ -4,48 +4,86 @@
   <head>
     <title>Ubermelon Order Form</title>
     <style>
+
+    body{
+      font-family: sans-serif;
+      font-size-adjust: -1;
+      margin-top:7em;
+      margin-left: 5em;
+      line-height: 1.5em;
+    }
+
+    h1 {
+      margin-left:400px;
+
+    }
+    h4{
+      margin-bottom: 4px;
+    }
+
+    div {
+      margin:0 20px;
+
+    }
+#sidebar{
+  display:inline-block;
+  vertical-align: top;
+
+}
+#order-form{
+  display:inline-block;
+
+
+}
+table.prices, th.prices, td.prices{
+  border: solid 1px;
+  border-collapse: collapse;
+  padding:5px 15  px;
+}
     
     </style>
   </head>
   <body>
 
 
-    <h1>Order!</h1>
+<p>
+            <h1>Order!</h1>
+</p>
 
 
     <div id="sidebar">
 
       <h2>Prices</h2>
-      <table>
+      <table class="prices">
         <thead>
 
           <tr>
-            <th>Melon Name</th>
-            <th>Price per lb.</th>
+            <th class="prices">Melon Name</th>
+            <th class="prices">Price per lb.</th>
           </tr>
 
         </thead>
         <tbody>
        
           <tr>
-            <td>Watermelon</td>
-            <td>$1.59</td>
+            <td class="prices">Watermelon</td>
+            <td class="prices">$1.59</td>
           </tr>
           <tr>
-            <td>Honeydew</td>
-            <td>$0.99</td>
+            <td class="prices">Honeydew</td>
+            <td class="prices">$0.99</td>
           </tr>
           <tr>
-            <td>Canteloupe</td>
-            <td>$1.29</td>
+            <td class="prices">Canteloupe</td>
+            <td class="prices">$1.29</td>
           </tr>
           <tr>
-            <td>Crenshaw</td>
-            <td>$2.19</td>
+            <td class="prices">Crenshaw</td>
+            <td class="prices">$2.19</td>
           </tr>
           <tr>
-            <td>Canary</td>
-            <td>$11.99</td>
+            <td class="prices">Canary</td>
+            <td class="prices">$11.99</td>
           </tr>
 
         </tbody>
@@ -54,16 +92,21 @@
 
     <div id="order-form">
 
+
       <h2>Place your orders here! You know you want to.</h2>
 
+      
+
       <form action="/process" method="get">
-        <label for="first">First Name</label>
-        <input type="text" name="firstname" id="first"><br>
+        <table><tr><td>
+        <label for="first">First Name</label></td><td>
+        <input type="text" name="firstname" id="first"></td></tr>
+        <tr><td>
+        <label for="last">Last Name</label></td><td>
+        <input type="text" name="lastname" id="last">
 
-        <label for="last">Last Name</label>
-        <input type="text" name="lastname" id="last"><br>
-
-        <label for="melon_form">Melon Type</label>
+        <tr><td>
+        <label for="melon_form">Melon Type</label></td><td>
         <select name="melontype" id="melon_form">
           <option value="watermelon">Watermelon</option>
           <option value="honeydew">Honeydew</option>
@@ -71,26 +114,27 @@
           <option value="crenshaw">Crenshaw</option>
           <option value="canary">Canary</option>
         </select>
-        <label for="quantity-form">Quantity*:</label>
+        <tr><td><label for="quantity-form">Quantity*:</label></td><td>
         <input type="text" name="quantity" id="quantity-form">
+      </td></tr></table>
 
         <h4>Delivery Time</h4>
         <label><input type="radio" name="time" value="am"> 12:00am-12:00pm</label>
-        <label><input type="radio" name="time" value="pm"> 12:00pm-12:00am</label>
-        <label><input type="radio" name="time" value="wat"> Time is an illusion</label>
+        <br><label><input type="radio" name="time" value="pm"> 12:00pm-12:00am</label>
+        <br><label><input type="radio" name="time" value="wat"> Time is an illusion</label>
         <br>
 
         <h4>Returning Customer?</h4>
         <label><input type="radio" name="returning" value="yes" > Yes</label>
-        <label><input type="radio" name="returning" value="no" > No</label>
+        <br><label><input type="radio" name="returning" value="no" > No</label>
         <br>
 
         <h4>For Statistical Purposes:</h4>
         <label><input type="checkbox" name="stats" value="Dog"> Dog</label>
-        <label><input type="checkbox" name="stats" value="Cat"> Cat</label>
-        <label><input type="checkbox" name="stats" value="Hedgehog"> Hedgehog</label>
-        <label><input type="checkbox" name="stats" value="Balloonicorn"> Balloonicorn</label>
-        <label><input type="checkbox" name="stats" value="Yak"> Yak</label>
+        <br><label><input type="checkbox" name="stats" value="Cat"> Cat</label>
+        <br><label><input type="checkbox" name="stats" value="Hedgehog"> Hedgehog</label>
+        <br><label><input type="checkbox" name="stats" value="Balloonicorn"> Balloonicorn</label>
+        <br><label><input type="checkbox" name="stats" value="Yak"> Yak</label>
         <br>
         <input type="submit">
 
